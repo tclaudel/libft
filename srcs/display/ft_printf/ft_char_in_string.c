@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_p_converter.c                                 .::    .:/ .      .::   */
+/*   ft_char_in_string.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/28 10:39:15 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/03 11:42:34 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/12/03 11:44:09 by tclaudel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/12/03 11:44:20 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_p_converter(long long address, t_printf *pf)
+int		ft_char_in_string(char c, char *str)
 {
-	char	*s;
+	int i;
 
-	if (ft_char_in_string('.', pf->flags) && !address)
-		return (ft_strdup("0x"));
-	s = ft_itoa_ll_base(address, "0123456789abcdef");
-	if (ft_char_in_string('0', pf->flags))
+	i = 0;
+	while (str[i])
 	{
-		free(s);
-		return (ft_strdup("0x"));
+		if (c == str[i])
+			return (1);
+		i++;
 	}
-	return (ft_strfjoin("0x", s, 2));
+	if (c == '\0')
+		return (1);
+	return (0);
 }

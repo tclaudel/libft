@@ -6,12 +6,12 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 13:47:38 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/28 11:11:43 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 11:42:48 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int			ft_isone_nine(int c)
 {

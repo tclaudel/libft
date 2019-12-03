@@ -6,12 +6,12 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/30 14:30:58 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/28 10:28:52 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 11:42:44 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_del_neg(char *str)
 {

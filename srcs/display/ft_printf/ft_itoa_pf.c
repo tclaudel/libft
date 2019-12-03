@@ -6,12 +6,12 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/25 09:18:12 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/25 09:59:41 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 11:42:33 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char		*ft_itoa_pf(int n, t_printf *pf)
 {

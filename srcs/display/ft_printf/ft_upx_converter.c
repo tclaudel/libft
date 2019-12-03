@@ -6,12 +6,12 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/28 10:48:42 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/07 14:07:38 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 11:42:51 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_upx_converter(unsigned int nb)
 {
