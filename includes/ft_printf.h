@@ -6,13 +6,13 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/28 10:06:37 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/03 12:27:13 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 14:49:53 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FTPRINTF_H
-# define FTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>

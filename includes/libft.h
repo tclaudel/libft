@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/03 10:03:45 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 14:24:35 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include "./ft_printf.h"
 
 /*
 ** ALLOC
@@ -123,6 +122,6 @@ void			ft_strdel(char **ptr);
 ** READ
 */
 
-int				get_next_line(int fd, char **line);
+ssize_t			get_next_line(int fd, char **line);
 
 #endif

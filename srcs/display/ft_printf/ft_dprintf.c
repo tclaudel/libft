@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/03 12:27:18 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/03 12:31:46 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 14:24:57 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -74,7 +74,8 @@ static char		**ft_set_tmp(const char *str)
 	return (tmp);
 }
 
-int				ft_core_dprintf(const char *s, size_t pos, t_printf *pf, va_list ap)
+int				ft_core_dprintf(const char *s, size_t pos, t_printf *pf,
+				va_list ap)
 {
 	char		**tmp;
 	char		*result;
@@ -103,7 +104,7 @@ int				ft_core_dprintf(const char *s, size_t pos, t_printf *pf, va_list ap)
 	return (pf->return_size);
 }
 
-int			ft_dprintf(int fd, const char *s, ...)
+int				ft_dprintf(int fd, const char *s, ...)
 {
 	va_list		ap;
 	size_t		pos;
