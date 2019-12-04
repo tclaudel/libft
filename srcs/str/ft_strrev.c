@@ -6,10 +6,12 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/20 11:11:07 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/25 09:59:00 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/04 17:29:32 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char		*ft_strrev(char *str)
 {
