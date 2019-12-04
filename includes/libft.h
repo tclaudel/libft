@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/04 17:45:12 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/04 17:47:01 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -111,7 +111,7 @@ char			*ft_strrev(char *str);
 size_t			ft_strnlen(const char *str, size_t maxlen);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strfjoin(char *s1, char *s2, int free);
-char			*strtok_r (char *s, const char *charset);
+char			*strtok(char *s, const char *charset);
 size_t			ft_strcspn(char *s1, const char *s2);
 size_t			ft_strspn(char *s1, const char *s2);
 

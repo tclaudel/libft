@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/04 17:10:27 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/04 17:35:36 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/04 17:46:57 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,7 +33,7 @@ size_t		ft_strcspn(char *s1, const char *s2)
 	return(i);
 }
 
-char	*strtok_r (char *s, const char *charset)
+char	*strtok(char *s, const char *charset)
 {
 	char			*end;
 	static char		*save_str;
