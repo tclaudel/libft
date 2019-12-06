@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_printf.c                                      .::    .:/ .      .::   */
+/*   ft_printfduq.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/28 16:46:55 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/06 17:51:16 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/12/06 17:46:11 by tclaudel     #+#   ##    ##    #+#       */
+/*   Updated: 2019/12/06 18:01:53 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_printf	*setup_struct(void)
+static t_printf	*setup_struct(void)
 {
 	t_printf *setup;
 
@@ -30,7 +30,7 @@ t_printf	*setup_struct(void)
 	return (setup);
 }
 
-char		*ft_join_result(char *result, char *tmp, t_printf *pf)
+static char		*ft_join_result(char *result, char *tmp, t_printf *pf)
 {
 	char	*s;
 
@@ -51,7 +51,7 @@ char		*ft_join_result(char *result, char *tmp, t_printf *pf)
 	return (s);
 }
 
-char		**ft_set_tmp(const char *str)
+static char		**ft_set_tmp(const char *str)
 {
 	char	**tmp;
 	size_t	i;
@@ -73,7 +73,7 @@ char		**ft_set_tmp(const char *str)
 	return (tmp);
 }
 
-int			ft_core_printf(const char *s, size_t pos, t_printf *pf, va_list ap)
+int				ft_printfducul(char *s, size_t pos, t_printf *pf, va_list ap)
 {
 	char		**tmp;
 	char		*result;
@@ -97,12 +97,12 @@ int			ft_core_printf(const char *s, size_t pos, t_printf *pf, va_list ap)
 			return (-1);
 		free(tmp);
 	}
-	write(1, result, pf->return_size);
+	write(1, ft_strjoin(result, " du cul"), pf->return_size + 8);
 	free(result);
 	return (pf->return_size);
 }
 
-int			ft_printf(const char *s, ...)
+int				ft_printfducul(char *s, ...)
 {
 	va_list		ap;
 	size_t		pos;
@@ -120,7 +120,7 @@ int			ft_printf(const char *s, ...)
 		return (ft_strlen(s));
 	}
 	pos = (char *)ft_memchr(s, '%', ft_strlen(s)) - s;
-	pos = ft_core_printf(s, pos, pf, ap);
+	pos = ft_printfducul(s, pos, pf, ap);
 	if (pos == (size_t)-1)
 		return (-1);
 	va_end(ap);

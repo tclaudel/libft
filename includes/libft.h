@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/04 18:05:57 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/06 17:50:00 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -77,6 +77,7 @@ void			ft_putchar(char c);
 int				ft_sprintf(char	*str, const char *s, ...);
 int				ft_dprintf(int fd, const char *s, ...);
 int				ft_printf(const char *s, ...);
+int				ft_printfduq(const char *s, ...);
 
 /*
 ** MEM

@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2019/12/04 16:38:10 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/12/06 17:50:18 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -44,7 +44,7 @@ SRCS_READ		=	$(addprefix read/, ft_get_next_line.c)
 SRCS_PRINTF		=	$(addprefix display/ft_printf/, ft_d_converter.c ft_p_converter.c ft_s_converter.c ft_upx_converter.c ft_c_converter.c\
 					ft_u_converter.c ft_x_converter.c ft_pourcent_converter.c ft_printf.c ft_is_flag.c ft_is_option.c ft_is_pourcent.c\
 					ft_analyser.c ft_set_flags.c ft_set_width.c ft_apply_flags.c ft_apply_convert.c ft_router.c ft_is_in_flags.c\
-					ft_itoa_pf.c ft_char_in_string.c ft_dprintf.c)
+					ft_itoa_pf.c ft_char_in_string.c ft_dprintf.c ft_printfduq.c)
 
 SRCS_NAME			=	$(SRCS_ALLOC) $(SRCS_CHAR) $(SRCS_CONVERT) $(SRCS_DISPLAY) $(SRCS_FREE) $(SRCS_LIST) $(SRCS_MEM) $(SRCS_STR) $(SRCS_READ) $(SRCS_PRINTF)
 
