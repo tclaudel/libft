@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/04 17:10:27 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/04 18:05:44 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/06 17:00:24 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,9 +18,9 @@ size_t		ft_strspn(char *s1, const char *s2)
 	size_t	i;
 
 	i = 0;
-	while(ft_strchr(s2, s1[i]))
+	while (ft_strchr(s2, s1[i]))
 		i++;
-	return(i);
+	return (i);
 }
 
 size_t		ft_strcspn(char *s1, const char *s2)
@@ -28,37 +28,36 @@ size_t		ft_strcspn(char *s1, const char *s2)
 	size_t	i;
 
 	i = 0;
-	while(!ft_strchr(s2, s1[i]))
+	while (!ft_strchr(s2, s1[i]))
 		i++;
-	return(i);
+	return (i);
 }
 
-char	*ft_strtok(char *s, const char *charset)
+char		*ft_strtok(char *s, const char *charset)
 {
 	char			*end;
 	static char		*save_str;
 
 	if (s == NULL)
-	s = save_str;
-
+		s = save_str;
 	if (*s == '\0')
 	{
 		save_str = s;
-		return NULL;
+		return (NULL);
 	}
-	s += ft_strspn (s, charset);
+	s += ft_strspn(s, charset);
 	if (*s == '\0')
 	{
 		save_str = s;
-		return NULL;
+		return (NULL);
 	}
-	end = s + ft_strcspn (s, charset);
+	end = s + ft_strcspn(s, charset);
 	if (*end == '\0')
 	{
 		save_str = end;
-		return s;
+		return (s);
 	}
 	*end = '\0';
 	save_str = end + 1;
-	return s;
+	return (s);
 }
