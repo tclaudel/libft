@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/06 17:46:11 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/06 18:01:53 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/06 18:08:59 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -115,9 +115,10 @@ int				ft_printfducul(char *s, ...)
 	if (!ft_memchr(s, '%', ft_strlen(s)))
 	{
 		ft_putstr(s);
+		ft_putstr(" du cul");
 		va_end(ap);
 		free(pf);
-		return (ft_strlen(s));
+		return (ft_strlen(s) + 8);
 	}
 	pos = (char *)ft_memchr(s, '%', ft_strlen(s)) - s;
 	pos = ft_printfducul(s, pos, pf, ap);
