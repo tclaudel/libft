@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/06 17:46:11 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/06 18:08:59 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/06 18:20:52 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -73,7 +73,7 @@ static char		**ft_set_tmp(const char *str)
 	return (tmp);
 }
 
-int				ft_printfducul(char *s, size_t pos, t_printf *pf, va_list ap)
+int				coreducul(char *s, size_t pos, t_printf *pf, va_list ap)
 {
 	char		**tmp;
 	char		*result;
@@ -97,7 +97,7 @@ int				ft_printfducul(char *s, size_t pos, t_printf *pf, va_list ap)
 			return (-1);
 		free(tmp);
 	}
-	write(1, ft_strjoin(result, " du cul"), pf->return_size + 8);
+	write(1, result, pf->return_size -1);
 	free(result);
 	return (pf->return_size);
 }
@@ -114,17 +114,18 @@ int				ft_printfducul(char *s, ...)
 		return (-1);
 	if (!ft_memchr(s, '%', ft_strlen(s)))
 	{
-		ft_putstr(s);
-		ft_putstr(" du cul");
+		write(1, s, (ft_strlen(s) - (size_t)1));
+		ft_putstr(" du cul\n");
 		va_end(ap);
 		free(pf);
-		return (ft_strlen(s) + 8);
+		return (ft_strlen(s) + 9);
 	}
 	pos = (char *)ft_memchr(s, '%', ft_strlen(s)) - s;
-	pos = ft_printfducul(s, pos, pf, ap);
+	pos = coreducul(s, pos, pf, ap);
 	if (pos == (size_t)-1)
 		return (-1);
 	va_end(ap);
 	free(pf);
+	ft_putstr(" du cul\n");
 	return (pos);
 }

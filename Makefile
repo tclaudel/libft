@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2019/12/06 17:50:18 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/12/09 16:57:00 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -72,7 +72,7 @@ all: $(OBJ_PATH) $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "$'[32m\nCompiling effected successfully!"
+	@printf "	\033[2K\r\033[1;38;5;110mlibft:	\033[0;38;5;121mUpdated\n\033[0m"
 
 $(OBJ_PATH):
 	@mkdir -p bin/ 2> /dev/null
@@ -88,14 +88,31 @@ $(OBJ_PATH):
 	@mkdir -p bin/read 2> /dev/null
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
-	@echo "$'[31mCompiling :$'[0m $<$'[0m"
+	@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
 	@gcc $(FLAG) -g3 -I ${HEADER} -c $< -o $@
 
 clean:
-	${RM} ${OBJ_PATH}
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/.	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/..	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/...	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/.	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/..	\033[37m"
+	@sleep 0.1
+	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/...	\033[37m"
+	@sleep 0.1
+	@${RM} ${OBJ_PATH}
+	@printf "\33[2K\r\033[0;31;5;110mDeleted successfully!\n\033[0m"
 
 fclean: clean
-	${RM} ${NAME}
+	@${RM} ${NAME}
 
 re: fclean all
 
