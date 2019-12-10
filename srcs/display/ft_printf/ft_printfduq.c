@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/06 17:46:11 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/06 18:20:52 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/10 16:30:48 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -97,7 +97,7 @@ int				coreducul(char *s, size_t pos, t_printf *pf, va_list ap)
 			return (-1);
 		free(tmp);
 	}
-	write(1, result, pf->return_size -1);
+	write(1, result, pf->return_size - 1);
 	free(result);
 	return (pf->return_size);
 }
