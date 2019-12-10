@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/28 13:33:48 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/10 16:30:30 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/10 16:59:30 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -47,6 +47,8 @@ size_t		overflow(char **line, char **str, size_t *size, char *nl_pointer)
 		(*line)[line_size - 1] = '\0';
 	*size -= line_size;
 	ft_memcpy(*str, *str + line_size, *size);
+	if (!(ft_memchr(*str, '\n', line_size)))
+		line_size++;
 	return ((ssize_t)line_size);
 }
 
@@ -73,7 +75,7 @@ ssize_t		get_next_line(int fd, char **line)
 			free(str);
 		str = tmp;
 		tmp = ft_memchr(str + size, '\n', (size_t)ret);
-		size += (size_t)ret;
+		size += (size_t)ret ;
 	}
 	return (overflow(line, &str, &size, tmp));
 }
