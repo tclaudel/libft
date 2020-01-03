@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/28 13:33:48 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/10 16:59:30 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/03 11:08:31 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -75,7 +75,7 @@ ssize_t		get_next_line(int fd, char **line)
 			free(str);
 		str = tmp;
 		tmp = ft_memchr(str + size, '\n', (size_t)ret);
-		size += (size_t)ret ;
+		size += (size_t)ret;
 	}
 	return (overflow(line, &str, &size, tmp));
 }
