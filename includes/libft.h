@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/03 11:07:57 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/28 16:08:06 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+
+typedef		struct s_strhash
+{
+	char	*key;
+	char	*value;
+}					t_strhash;
 
 /*
 ** ALLOC
@@ -115,17 +121,26 @@ char			*ft_strfjoin(char *s1, char *s2, int free);
 char			*ft_strtok(char *s, const char *charset);
 size_t			ft_strcspn(char *s1, const char *s2);
 size_t			ft_strspn(char *s1, const char *s2);
+int				ft_strcmp(const char *s1, const char *s2);
 
 /*
 ** FREE
 */
 
 void			ft_strdel(char **ptr);
+int				ft_free_tab(char **strs);
 
 /*
 ** READ
 */
 
 ssize_t			get_next_line(int fd, char **line);
+
+/*
+** HASH
+*/
+
+t_strhash		*ft_strhash(char **key, char **value);
+char			*ft_get_hash_value(t_strhash *hash, char *str);
 
 #endif

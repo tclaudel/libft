@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_free_tab.c                                    .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/28 13:45:15 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/28 13:47:42 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/28 16:03:33 by tclaudel     #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/28 16:03:49 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_free_tab(char **strs)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 
 	i = 0;
-	while (strs[i])
-		free(strs[i++]);
-	free(strs);
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
 	return (0);
 }
