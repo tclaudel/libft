@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/29 10:02:45 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/29 12:46:09 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -154,5 +154,6 @@ ssize_t			get_next_line(int fd, char **line);
 
 t_strhash		*ft_strhash(char **key, char **value);
 char			*ft_get_hash_value(t_strhash *hash, char *str);
+void			*change_value(t_strhash *hash, char *str, char *new);
 
 #endif

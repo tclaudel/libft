@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_hash.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: coscialp <coscialp@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/28 16:04:59 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/28 17:11:46 by coscialp    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/29 12:46:46 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,6 +44,23 @@ char		*ft_get_hash_value(t_strhash *hash, char *str)
 	{
 		if (!ft_strcmp(hash[i].key, str))
 			return (hash[i].value);
+		i++;
+	}
+	return (NULL);
+}
+
+void		*change_value(t_strhash *hash, char *str, char *new)
+{
+	size_t	i;
+
+	i = 0;
+	while (hash[i].key)
+	{
+		if (!ft_strcmp(hash[i].key, str))
+		{
+			free(hash[i].value);
+			hash[i].value = ft_strdup(new);
+		}
 		i++;
 	}
 	return (NULL);
