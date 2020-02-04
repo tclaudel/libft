@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/03 11:09:09 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/04 14:54:55 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,6 +27,7 @@
 # define YELLOW "\033[0;33m"
 # define YELLOW_BOLD "\033[1;33m"
 # define RESET   "\033[0m"
+# define WHITESPACES " \t\n\v\f\r"
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
@@ -135,6 +136,7 @@ char			*ft_strtok(char *s, const char *charset);
 size_t			ft_strcspn(char *s1, const char *s2);
 size_t			ft_strspn(char *s1, const char *s2);
 int				ft_strcmp(const char *s1, const char *s2);
+size_t			ft_count_whitespaces(char *str);
 
 /*
 ** FREE

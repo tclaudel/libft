@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2020/01/31 15:15:16 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/02/04 14:54:15 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -38,7 +38,7 @@ SRCS_STR		=	$(addprefix str/, ft_split.c ft_strchr.c ft_strcpy.c\
 					ft_strfjoin.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c\
 					ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 					ft_strnstr.c ft_strrchr.c ft_strrev.c ft_strtrim.c ft_strtok.c\
-					ft_strcmp.c)
+					ft_strcmp.c ft_count_whitespaces.c)
 
 SRCS_READ		=	$(addprefix read/, ft_get_next_line.c)
 
