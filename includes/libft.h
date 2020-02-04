@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/29 12:46:09 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/03 11:09:09 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,6 +25,7 @@
 # define GREY "\033[3;90m"
 # define ORANGE "\033[3;91m"
 # define YELLOW "\033[0;33m"
+# define YELLOW_BOLD "\033[1;33m"
 # define RESET   "\033[0m"
 # include <stdlib.h>
 # include <stdio.h>

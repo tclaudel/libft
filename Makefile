@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2020/01/28 16:10:23 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/31 15:15:16 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -26,9 +26,9 @@ SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
 
 SRCS_FREE		=	$(addprefix free/, ft_strdel.c ft_free_tab.c)
 
-SRCS_LIST		=	$(addprefix list/, ft_lstadd_back_bonus.c\
-					ft_lstadd_front_bonus.c ft_lstlast_bonus.c\
-					ft_lstnew_bonus.c ft_lstsize_bonus.c)
+SRCS_LIST		=	$(addprefix list/, ft_lstadd_back.c\
+					ft_lstadd_front.c ft_lstlast.c\
+					ft_lstnew.c ft_lstsize.c )
 
 SRCS_MEM		=	$(addprefix mem/, ft_bzero.c ft_memccpy.c ft_memchr.c\
 					ft_memcmp.c ft_memcpy.c ft_memfjoin.c ft_memjoin.c\
@@ -73,7 +73,7 @@ all: $(OBJ_PATH) $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@ar rcs $(NAME) $(OBJ)
-	@printf "	\033[2K\r\033[1;38;5;110mlibft\t:\t\033[0;38;5;121mUpdated\n\033[0m"
+	@printf "	\033[2K\r\033[1;38;5;110mlibft\t\t: \033[0;38;5;121mUpdated\n\033[0m"
 
 $(OBJ_PATH):
 	@mkdir -p bin/ 2> /dev/null
