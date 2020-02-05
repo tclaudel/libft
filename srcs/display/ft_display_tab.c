@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_count_whitespaces.c                           .::    .:/ .      .::   */
+/*   ft_display_tab.c                                 .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/02/04 15:00:06 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/04 15:01:28 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Created: 2020/02/05 09:09:58 by tclaudel     #+#   ##    ##    #+#       */
+/*   Updated: 2020/02/05 10:31:15 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
-size_t			ft_count_whitespaces(char *str)
+void	ft_display_tab(char **tab, char *tabname)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] && ft_strchr(WHITESPACES, str[i]))
+	while (tab[i])
+	{
+		ft_printf("%s[%u]\t: %s\n", tabname, i, tab[i]);
 		i++;
-	return (i);
+	}
 }

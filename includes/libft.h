@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/04 14:54:55 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/05 09:17:07 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -98,6 +98,7 @@ int				ft_sprintf(char	*str, const char *s, ...);
 int				ft_dprintf(int fd, const char *s, ...);
 int				ft_printf(const char *s, ...);
 int				ft_printfducul(char *s, ...);
+void			ft_display_tab(char **tab, char *tabname);
 
 /*
 ** MEM

@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2020/02/04 14:54:15 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/02/05 10:29:56 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -22,7 +22,8 @@ SRCS_CONVERT	=	$(addprefix convert/, ft_atoi.c ft_itoa.c ft_itoa_base.c\
 					ft_itoa_ll_base.c ft_itoa_u_base.c ft_hash.c)
 
 SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
-					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c)
+					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c\
+					ft_display_tab.c)
 
 SRCS_FREE		=	$(addprefix free/, ft_strdel.c ft_free_tab.c)
 
@@ -91,6 +92,9 @@ $(OBJ_PATH):
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
 	@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
 	@gcc $(FLAG) -g3 -I ${HEADER} -c $< -o $@
+
+norme:
+	@norminette $(SRC_PATH) $(HEADER)
 
 clean:
 	@printf "\33[2K\r\033[0;31;5;110mDeleting libft srcs/	\033[37m"
