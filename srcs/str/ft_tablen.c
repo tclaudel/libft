@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_display_tab.c                                 .::    .:/ .      .::   */
+/*   ft_tablen.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: coscialp <coscialp@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/02/05 09:09:58 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/05 10:43:19 by coscialp    ###    #+. /#+    ###.fr     */
+/*   Created: 2020/02/06 14:21:27 by coscialp     #+#   ##    ##    #+#       */
+/*   Updated: 2020/02/06 14:23:09 by coscialp    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_printf.h"
 
-void	ft_display_tab(char **tab, char *tabname)
+size_t		ft_tablen(char **str)
 {
-	unsigned int	i;
+	size_t i;
 
 	i = 0;
-	while (tab[i])
-	{
-		ft_printf("%s[%u]\t: %s\n", tabname, i, tab[i]);
+	while (str[i])
 		i++;
-	}
+	return (i);
 }

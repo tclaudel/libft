@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   libft.h                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: coscialp <coscialp@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/05 09:17:07 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/06 14:23:26 by coscialp    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -117,6 +117,7 @@ void			*ft_memjoin(void *s1, void *s2, size_t size1, size_t size2);
 ** STR
 */
 
+size_t			ft_tablen(char **str);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *fi, const char *se, size_t len);
