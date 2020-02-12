@@ -6,7 +6,7 @@
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:46:51 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/10 09:59:06 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/11 17:19:39 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -140,6 +140,8 @@ size_t			ft_strspn(char *s1, const char *s2);
 int				ft_strcmp(const char *s1, const char *s2);
 size_t			ft_count_whitespaces(char *str);
 size_t			ft_charpos(const char *s, int c);
+size_t			ft_charrpos(const char *s, int c);
+char			*ft_clearcharset(char *str, char *charset);
 
 /*
 ** FREE
