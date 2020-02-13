@@ -6,7 +6,7 @@
 #    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2020/02/11 17:19:55 by tclaudel    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/02/13 11:52:25 by tclaudel    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -40,7 +40,7 @@ SRCS_STR		=	$(addprefix str/, ft_split.c ft_strchr.c ft_strcpy.c\
 					ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 					ft_strnstr.c ft_strrchr.c ft_strrev.c ft_strtrim.c ft_strtok.c\
 					ft_strcmp.c ft_count_whitespaces.c ft_tablen.c\
-					ft_charpos.c ft_charrpos.c ft_clearcharset.c)
+					ft_charpos.c ft_charrpos.c ft_clearcharset.c ft_insert.c)
 
 SRCS_READ		=	$(addprefix read/, ft_get_next_line.c)
 
@@ -71,7 +71,10 @@ RM					=	rm -rf
 
 FLAG				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
 
-all: $(OBJ_PATH) $(NAME)
+all: pull $(OBJ_PATH) $(NAME)
+
+$(PULL):
+	@git pull origin master
 
 $(NAME): $(OBJ) $(HEADER)
 	@ar rcs $(NAME) $(OBJ)
@@ -93,6 +96,9 @@ $(OBJ_PATH):
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
 	@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
 	@gcc $(FLAG) -g3 -I ${HEADER} -c $< -o $@
+
+pull:
+	@git pull origin master
 
 norme:
 	@norminette $(SRC_PATH) $(HEADER)

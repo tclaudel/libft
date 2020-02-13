@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strncmp.c                                     .::    .:/ .      .::   */
+/*   ft_insert.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 13:01:50 by tclaudel     #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/12 10:42:53 by tclaudel    ###    #+. /#+    ###.fr     */
+/*   Created: 2020/02/13 11:43:40 by tclaudel     #+#   ##    ##    #+#       */
+/*   Updated: 2020/02/13 11:48:49 by tclaudel    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *fi, const char *se, size_t len)
+char	*ft_insert(char *src, char *insered, size_t n, int free_option)
 {
-	const unsigned char	*f;
-	const unsigned char	*s;
-	size_t				i;
+	char	*dest;
 
-	i = 0;
-	f = (const unsigned char *)fi;
-	s = (const unsigned char *)se;
-	if (len == 0)
-		return (0);
-	while (i < len && f[i] == s[i] && f[i] != '\0')
-		i++;
-	if (i == len)
-		i--;
-	return ((unsigned char)f[i] - s[i]);
+	dest = ft_strndup(src, n);
+	dest = ft_strfjoin(dest, insered, 1);
+	dest = ft_strfjoin(dest, src + n, 1);
+	if (free_option == 1)
+		free(src);
+	return (dest);
 }
