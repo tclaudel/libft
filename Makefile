@@ -1,15 +1,15 @@
 # **************************************************************************** #
-#                                                           LE - /             #
-#                                                               /              #
-#    Makefile                                         .::    .:/ .      .::    #
-#                                                  +:+:+   +:    +:  +:+:+     #
-#    By: tclaudel <tclaudel@student.le-101.fr>      +:+   +:    +:    +:+      #
-#                                                  #+#   #+    #+    #+#       #
-#    Created: 2019/10/11 16:32:18 by tclaudel     #+#   ##    ##    #+#        #
-#    Updated: 2020/02/13 11:52:25 by tclaudel    ###    #+. /#+    ###.fr      #
-#                                                          /                   #
-#                                                         /                    #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/11 16:32:18 by tclaudel          #+#    #+#              #
+#    Updated: 2020/02/17 13:19:30 by coscialp         ###   ########lyon.fr    #
+#                                                                              #
 # **************************************************************************** #
+
 
 
 SRCS_ALLOC		=	$(addprefix alloc/, ft_calloc.c ft_strdup.c ft_strndup.c\
@@ -25,7 +25,7 @@ SRCS_DISPLAY	=	$(addprefix display/, ft_putchar.c ft_putchar_fd.c\
 					ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c\
 					ft_display_tab.c)
 
-SRCS_FREE		=	$(addprefix free/, ft_strdel.c ft_free_tab.c)
+SRCS_FREE		=	$(addprefix free/, ft_strdel.c ft_free_tab.c ft_memdel.c)
 
 SRCS_LIST		=	$(addprefix list/, ft_lstadd_back.c\
 					ft_lstadd_front.c ft_lstlast.c\
@@ -49,7 +49,12 @@ SRCS_PRINTF		=	$(addprefix display/ft_printf/, ft_d_converter.c ft_p_converter.c
 					ft_analyser.c ft_set_flags.c ft_set_width.c ft_apply_flags.c ft_apply_convert.c ft_router.c ft_is_in_flags.c\
 					ft_itoa_pf.c ft_char_in_string.c ft_dprintf.c ft_printfduq.c)
 
-SRCS_NAME			=	$(SRCS_ALLOC) $(SRCS_CHAR) $(SRCS_CONVERT) $(SRCS_DISPLAY) $(SRCS_FREE) $(SRCS_LIST) $(SRCS_MEM) $(SRCS_STR) $(SRCS_READ) $(SRCS_PRINTF)
+SRCS_HASH		=	$(addprefix hash/, ft_hashnew.c ft_hashadd_front.c\
+					ft_hashadd_back.c ft_hashdel.c ft_hash_display.c ft_hash_free.c\
+					ft_hash_search_value.c ft_hashlen.c ft_hash_change_value.c\
+					ft_hash_init.c ft_hash_sort.c)
+
+SRCS_NAME			=	$(SRCS_ALLOC) $(SRCS_CHAR) $(SRCS_CONVERT) $(SRCS_DISPLAY) $(SRCS_FREE) $(SRCS_LIST) $(SRCS_MEM) $(SRCS_STR) $(SRCS_READ) $(SRCS_PRINTF) $(SRCS_HASH)
 
 HEADER				=	includes/
 
@@ -92,6 +97,7 @@ $(OBJ_PATH):
 	@mkdir -p bin/mem 2> /dev/null
 	@mkdir -p bin/str 2> /dev/null
 	@mkdir -p bin/read 2> /dev/null
+	@mkdir -p bin/hash 2> /dev/null
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER) Makefile
 	@printf "\033[2K\r\033[0;31;5;110mCompiling...	\033[37m$<\033[36m \033[0m"
