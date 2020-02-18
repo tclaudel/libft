@@ -6,7 +6,7 @@
 /*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:46:51 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/02/18 08:28:38 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/02/18 08:32:14 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,14 @@ typedef struct		s_hash
 	void			*value;
 	char			*type;
 	struct s_hash	*top;
+	struct s_hash	*before;
 	struct s_hash	*next;
 	struct s_hash	*(*new)(char *, void *, char *);
-	void			(*del)(struct s_hash **, struct s_hash *);
+	void			(*del)(struct s_hash **, struct s_hash *, struct s_hash *);
 	void			(*print)(struct s_hash *, char *);
 	void			(*add_back)(struct s_hash **, struct s_hash *);
 	void			(*add_front)(struct s_hash **, struct s_hash *);
-	void			(*del_all)(struct s_hash *);
+	void			(*del_all)(struct s_hash **);
 	void			*(*search)(struct s_hash *, char *);
 	size_t			(*len)(struct s_hash *);
 	void			(*change)(struct s_hash *, char *, void *, char *);
@@ -61,9 +62,9 @@ typedef struct		s_hash
 
 void				ft_hashadd_front(t_hash **hash, t_hash *new);
 void				ft_hashadd_back(t_hash **hash, t_hash *new);
-void				ft_hashdel(t_hash **hash, t_hash *next);
+void				ft_hashdel(t_hash **hash, t_hash *before, t_hash *next);
 void				ft_hash_display(t_hash *hash, char *name);
-void				ft_hash_free(t_hash *hash);
+void				ft_hash_free(t_hash **hash);
 void				*ft_hash_search_value(t_hash *hash, char *key);
 void				ft_hash_change_value(t_hash *hash, char *key,
 					void *value, char *type);
