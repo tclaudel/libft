@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hash_change_value.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coscialp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 10:56:41 by coscialp          #+#    #+#             */
-/*   Updated: 2020/02/14 10:56:47 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/02/18 09:24:06 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_hash_change_value(t_hash *hash, char *key, void *value, char *type)
 		if (!ft_strcmp(hash->key, key))
 		{
 			ft_memdel((void *)&hash->value);
-			hash->value = value;
+			hash->value = ft_strdup(value);
 			return ;
 		}
 		hash = hash->next;
