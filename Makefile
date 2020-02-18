@@ -6,7 +6,7 @@
 #    By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 16:32:18 by tclaudel          #+#    #+#              #
-#    Updated: 2020/02/17 13:19:30 by coscialp         ###   ########lyon.fr    #
+#    Updated: 2020/02/18 08:33:39 by coscialp         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ SRCS_PRINTF		=	$(addprefix display/ft_printf/, ft_d_converter.c ft_p_converter.c
 SRCS_HASH		=	$(addprefix hash/, ft_hashnew.c ft_hashadd_front.c\
 					ft_hashadd_back.c ft_hashdel.c ft_hash_display.c ft_hash_free.c\
 					ft_hash_search_value.c ft_hashlen.c ft_hash_change_value.c\
-					ft_hash_init.c ft_hash_sort.c)
+					ft_hash_init.c ft_hash_sort.c ft_hash_find.c)
 
 SRCS_NAME			=	$(SRCS_ALLOC) $(SRCS_CHAR) $(SRCS_CONVERT) $(SRCS_DISPLAY) $(SRCS_FREE) $(SRCS_LIST) $(SRCS_MEM) $(SRCS_STR) $(SRCS_READ) $(SRCS_PRINTF) $(SRCS_HASH)
 
