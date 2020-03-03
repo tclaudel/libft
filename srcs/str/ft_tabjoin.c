@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hash_search_value.c                             :+:      :+:    :+:   */
+/*   ft_tabjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 17:54:32 by coscialp          #+#    #+#             */
-/*   Updated: 2020/02/19 14:17:19 by coscialp         ###   ########lyon.fr   */
+/*   Created: 2020/03/03 16:14:25 by coscialp          #+#    #+#             */
+/*   Updated: 2020/03/03 16:27:08 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_hash_search_value(t_hash *hash, char *key)
+char	**ft_tabjoin(char **t1, char **t2)
 {
-	while (hash)
+	size_t	i;
+	size_t	j;
+	char	**tab;
+
+	i = 0;
+	j = 0;
+	if (!(tab = (char **)malloc(sizeof(char *) *
+	(ft_tablen(t1) + ft_tablen(t2) + 1))))
+		return (NULL);
+	while (t1[j])
 	{
-		if (!ft_strcmp(hash->key, key))
-			return (hash->value);
-		hash = hash->next;
+		tab[i] = ft_strdup(t1[j]);
+		j++;
+		i++;
 	}
-	return (NULL);
+	j = 0;
+	while (t2[j])
+	{
+		tab[i] = ft_strdup(t2[j]);
+		i++;
+		j++;
+	}
+	tab[i] = NULL;
+	return (tab);
 }
