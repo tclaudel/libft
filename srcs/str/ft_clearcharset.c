@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_clearcharset.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 17:19:06 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/02/17 13:06:49 by tclaudel         ###   ########lyon.fr   */
+/*   Updated: 2020/03/09 15:12:08 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_clearcharset(char *str, char *charset)
 			ret[j++] = str[i];
 		i++;
 	}
+	ft_strdel(&str);
 	ret[lmalloc] = 0;
 	return (ret);
 }
