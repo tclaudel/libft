@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+         #
+#    By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 16:32:18 by tclaudel          #+#    #+#              #
-#    Updated: 2020/03/03 16:36:23 by tclaudel         ###   ########lyon.fr    #
+#    Updated: 2020/03/09 15:30:52 by coscialp         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
