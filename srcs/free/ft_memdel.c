@@ -6,7 +6,7 @@
 /*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 15:21:44 by coscialp          #+#    #+#             */
-/*   Updated: 2020/02/17 13:18:31 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/03/10 15:09:17 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memdel(void **ptr)
 {
-	if (ptr)
+	if (*ptr)
 	{
 		free(*ptr);
 		*ptr = NULL;
