@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	*get_value_alloc(void *value, char *type)
+static void *get_value_alloc(void *value, char *type)
 {
 	char *str;
 
@@ -30,9 +30,9 @@ static void	*get_value_alloc(void *value, char *type)
 	return (NULL);
 }
 
-t_hash		*ft_hashnew(char *key, void *value, char *type)
+t_hash *ft_hashnew(char *key, void *value, char *type)
 {
-	t_hash	*hash;
+	t_hash *hash;
 
 	if (!(hash = (t_hash *)malloc(sizeof(t_hash) * 1)))
 		return (NULL);

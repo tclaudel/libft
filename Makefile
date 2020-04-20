@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+         #
+#    By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 16:32:18 by tclaudel          #+#    #+#              #
-#    Updated: 2020/03/09 15:30:52 by coscialp         ###   ########lyon.fr    #
+#    Updated: 2020/04/15 11:50:37 by tclaudel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ SRCS_STR		=	$(addprefix str/, ft_split.c ft_strchr.c ft_strcpy.c\
 					ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 					ft_strnstr.c ft_strrchr.c ft_strrev.c ft_strtrim.c ft_strtok.c\
 					ft_strcmp.c ft_count_whitespaces.c ft_tablen.c\
-					ft_charpos.c ft_charrpos.c ft_clearcharset.c ft_insert.c ft_tabjoin.c)
+					ft_charpos.c ft_charrpos.c ft_clearcharset.c ft_insert.c ft_tabjoin.c\
+					ft_char_counter.c)
 
 SRCS_READ		=	$(addprefix read/, ft_get_next_line.c)
 
@@ -74,7 +75,7 @@ CC					=	cc
 
 RM					=	rm -rf
 
-FLAG				=	-Wall -Werror -Wextra -g3 #-fsanitize=address
+FLAG				=	-Wall -Wextra -g3 -fsanitize=address #-Werror
 
 all: pull $(OBJ_PATH) $(NAME)
 
