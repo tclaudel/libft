@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:46:51 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/03/06 14:26:15 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/04/21 10:16:05 by tclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,7 +188,7 @@ int				ft_strcmp(const char *s1, const char *s2);
 size_t			ft_count_whitespaces(char *str);
 size_t			ft_charpos(const char *s, int c);
 size_t			ft_charrpos(const char *s, int c);
-char			*ft_clearcharset(char *str, char *charset);
+char			*ft_clearcharset(char *str, char *charset, int free);
 char			*ft_insert(char *src, char *insered, size_t n, int free);
 size_t			ft_char_counter(char *s, char c);
 char			**ft_tabjoin(char **t1, char **t2);

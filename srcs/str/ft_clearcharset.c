@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_clearcharset.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 17:19:06 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/03/09 15:37:09 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/04/21 10:13:42 by tclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_clearcharset(char *str, char *charset)
+char	*ft_clearcharset(char *str, char *charset, int free)
 {
 	size_t	lmalloc;
 	size_t	i;
@@ -36,7 +36,8 @@ char	*ft_clearcharset(char *str, char *charset)
 			ret[j++] = str[i];
 		i++;
 	}
-	ft_strdel(&str);
+	if (free == 1)
+		ft_strdel(&str);
 	ret[lmalloc] = 0;
 	return (ret);
 }
