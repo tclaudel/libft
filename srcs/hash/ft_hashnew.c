@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hashnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coscialp <coscialp@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: coscialp <coscialp@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 13:33:26 by coscialp          #+#    #+#             */
-/*   Updated: 2020/02/18 08:16:56 by coscialp         ###   ########lyon.fr   */
+/*   Updated: 2020/04/22 15:06:52 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void *get_value_alloc(void *value, char *type)
+static void		*get_value_alloc(void *value, char *type)
 {
 	char *str;
 
@@ -30,7 +30,7 @@ static void *get_value_alloc(void *value, char *type)
 	return (NULL);
 }
 
-t_hash *ft_hashnew(char *key, void *value, char *type)
+t_hash			*ft_hashnew(char *key, void *value, char *type)
 {
 	t_hash *hash;
 

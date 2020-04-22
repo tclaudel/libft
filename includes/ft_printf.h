@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: coscialp <coscialp@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:06:37 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/02/27 16:40:02 by tclaudel         ###   ########lyon.fr   */
+/*   Updated: 2020/04/22 15:05:13 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H

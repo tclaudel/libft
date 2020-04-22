@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_char_counter.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: coscialp <coscialp@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 16:04:44 by tclaudel          #+#    #+#             */
-/*   Updated: 2020/02/26 16:58:20 by tclaudel         ###   ########lyon.fr   */
+/*   Updated: 2020/04/22 15:07:32 by coscialp         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
