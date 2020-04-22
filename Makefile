@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tclaudel <tclaudel@student.le-101.fr>      +#+  +:+       +#+         #
+#    By: coscialp <coscialp@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 16:32:18 by tclaudel          #+#    #+#              #
-#    Updated: 2020/04/15 11:50:37 by tclaudel         ###   ########.fr        #
+#    Updated: 2020/04/22 15:19:16 by coscialp         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,9 +75,9 @@ CC					=	cc
 
 RM					=	rm -rf
 
-FLAG				=	-Wall -Wextra -g3 -fsanitize=address #-Werror
+FLAG				=	-Wall -Wextra -g3 -Werror
 
-all: pull $(OBJ_PATH) $(NAME)
+all: $(OBJ_PATH) $(NAME)
 
 $(PULL):
 	@git pull origin master
