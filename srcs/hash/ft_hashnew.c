@@ -14,19 +14,8 @@
 
 static void		*get_value_alloc(void *value, char *type)
 {
-	char *str;
-
 	if (!ft_strcmp(type, "string"))
 		return (ft_strdup(value));
-	else if (!ft_strcmp(type, "int"))
-		return (ft_itoa((int)value));
-	else if (!ft_strcmp(type, "char"))
-	{
-		str = malloc(sizeof(char) * 2);
-		str[0] = (char)value;
-		str[1] = 0;
-		return (str);
-	}
 	return (NULL);
 }
 
